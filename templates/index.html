@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar Integration Web Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solar Integration Web Tool</h1>
+    <form action="/calculate" method="POST">
+        <label for="season">Season:</label>
+        <select name="season" id="season">
+            <option value="Autumn">Autumn</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Winter">Winter</option>
+            <option value="Kharif">Kharif</option>
+            <option value="Rabi">Rabi</option>
+            <option value="Zaid">Zaid</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <select name="location" id="location">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+        </select>
+
+        <label for="crop_type">Crop Type:</label>
+        <select name="crop_type" id="crop_type">
+            <option value="Barley">Barley</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Cotton">Cotten</option>
+            <option value="Gram">Gram</option>
+            <option value="Groundnut">Groundnut</option>
+            <option value="Maize">Maize</option>
+            <option value="Millets">Millets</option>
+            <option value="Mustard">Mustard</option>
+            <option value="Pulses">Pulses</option>
+            <option value="Rice">Rice</option>
+            <option value="Soybean">Soybean</option>
+            <option value="Sugarcane">Sugarcane</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Wheat">Wheat</option>
+        </select>
+
+        <label for="field_size">Field Size:</label>
+<input type="number" name="field_size" id="field_size" step="any" required>
+
+<label for="unit">Unit of Measurement:</label>
+<select name="unit" id="unit">
+    <option value="square_meters">Square Meters</option>
+    <option value="hectares">Hectares</option>
+    <option value="acres">Acres</option>
+</select>
+
+<input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
